@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+/*RESET*/
+*{
+	margin:0;
+	padding: 0;
+    font-family: Inter, sans-serif;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+p{
+    font-size: 15px;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: hsl(36, 100%, 99%);
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 45% 23%;
+    grid-template-rows: 25rem 15rem;
+    justify-content: center;
+    margin: 0 auto;
+    min-width: fit-content;
+    gap: 1.5em;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 3em;
+    width: 78%;
+}
+
+nav ul{
+    display: flex;
+    gap: 2em;
+    line-height: 3em;
+    color: hsl(236, 13%, 42%);
+    font-size: .8em;
+}
+
+nav ul li:hover{
+    cursor: pointer;
+    color: hsl(5, 85%, 63%);
+}
+
+#menu-mobile{
+    display: none;
+}
+
+main{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "img img" "sec1 sec2";
+    align-items: stretch;
+    gap: 1em;
+}
+
+#main-image{
+    width: 100%;
+    grid-area: img;
+}
+
+#main-image #img-desktop{
+    width: 100%;
+    display: block;
+ }
+ #main-image #img-mobile{
+    display: none;
+ }
+
+main :nth-child(2){
+    grid-area: sec1;
+    font-size: 2.8em;
+    font-weight: 800;
+    color: hsl(240, 100%, 5%);
+    width: 90%;
+    padding: 0;
+    line-height: .9em;
+}
+
+main :nth-child(3){
+    grid-area: sec2;
+    color: hsl(240, 100%, 5%);
+    font-size: .7em;
+    font-weight: 400;
+    letter-spacing: .1em;
+    line-height: 1.5em;
+}
+
+main :nth-child(3) button{
+    display: block;
+    position: relative;
+    background-color: hsl(5, 85%, 63%);
+    padding: 1em 2.5em;
+    border: 0;
+    color: hsl(36, 100%, 99%);
+    text-transform: uppercase;
+    bottom: -1.7em;
+    font-weight: 700;
+    letter-spacing: .2em;
+    font-size: 1em;
+}
+
+main :nth-child(3) button:hover{
+    cursor: pointer;
+    background-color: hsl(240, 100%, 5%);
+
+}
+
+aside{
+    background-color: hsl(240, 100%, 5%);
+    position: relative;
+    padding: .5rem 1rem;
+}
+
+aside h1{
+    color: hsl(35, 77%, 62%);
+    font-size: 1.8em;
+    margin: .5em 0;
+}
+
+aside h4{
+    color: hsl(36, 100%, 99%);
+    font-size: 1em;
+    margin: .6em 0;
+}
+
+aside h4:hover{
+    cursor: pointer;
+    color: hsl(35, 77%, 62%);
+}
+
+aside p{
+    color: hsl(36, 100%, 99%);
+    font-size: .75em;
+    font-weight: 100;
+    line-height: 1.8em;
+}
+
+aside hr{
+    margin: 1.3rem 0;
+    color: hsl(36, 100%, 99%);
+}
+
+footer{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /*height: fit-content;*/
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 0% 33% 33%;
+    justify-content: space-between;
+    align-content: center;
+}
+
+footer img{
+    display: inline;
+    max-width: 5.5em;
+    float: left;
+}
+
+footer .desc{
+    max-width: calc(100% - 5.5em);
+    float: right;
+    padding: 0 1em;
+}
+
+footer h1{
+    color: hsl(233, 8%, 79%);
+    margin-bottom: .3em;
+}
+
+footer h4{
+    color: hsl(240, 100%, 5%);
+    margin-bottom: .5em;
+    font-weight: 800;
+    font-size: .9em;
+}
+
+footer h4:hover{
+    cursor: pointer;
+    color: hsl(5, 85%, 63%);
+}
+
+footer p{
+    color: hsl(236, 13%, 42%);
+    font-size: .7em;
+    line-height: 1.8em;
+}
+
+.attribution{
+    text-align: center;
+}
+
+@media screen and (max-width: 375px) {
+
+    #container{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1em;
+        justify-content: center;
+        margin: 0 auto;
+        /*min-width: fit-content;
+        gap: 1.5em;*/
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 2em 1em;
+        width: 100%;
+    }
+    
+    nav{
+        display: none;
+    }
+
+    #menu-mobile{
+        display: block;
+        background: none;
+        border: none;
+    }
+
+    #main-image #img-desktop{
+        display: none;
+     }
+    #main-image #img-mobile{
+        width: 100%;
+        display: block;
+     }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main :nth-child(2){
+        width: 100%;
+    }
+    
+    main :nth-child(3){
+        margin: 1.2em 0;
+        height: 15em;
+    }
+    
+    main :nth-child(3) button{
+        bottom: -1.8em;
+        font-size: 1.3em;
+    }
+
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        /*
+        grid-column-start: 1;
+        grid-column-end: 3;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 0% 33% 33%;
+        justify-content: space-between;
+        align-content: center;
+        */
+    }
+
+    footer article{
+        margin: .8em 0;
+    }
+}
