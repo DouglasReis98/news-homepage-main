@@ -240,6 +240,17 @@ footer p{
         top: 0;
     }
 
+    .background-menu{
+        background-color: rgba(0, 0, 0, .5);
+        position: fixed;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 2;
+    }
+
     nav ul{
         display: block;
         font-size: 1em;
@@ -261,9 +272,11 @@ footer p{
 
     #menu-mobile-close{
         display: none;
+        position: fixed;
         background: none;
         border: none;
         z-index: 10;
+        right: 1.2rem;
     }
 
     #main-image #img-desktop{
