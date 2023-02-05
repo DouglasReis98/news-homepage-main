@@ -135,6 +135,7 @@ main :nth-child(3) button:hover{
 aside{
     background-color: hsl(240, 100%, 5%);
     position: relative;
+    height: fit-content;
     padding: 1.5rem 1rem;
 }
 
