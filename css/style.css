@@ -40,6 +40,15 @@ header{
     width: 78%;
 }
 
+.container-menu{
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    display: block;
+    width: auto;
+    height: auto;
+    z-index: 2;
+}
+
 nav ul{
     display: flex;
     gap: 2em;
@@ -240,7 +249,7 @@ footer p{
         top: 0;
     }
 
-    .background-menu{
+    .container-menu{
         background-color: rgba(0, 0, 0, .5);
         position: fixed;
         display: none;
